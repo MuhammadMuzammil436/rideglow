@@ -1,12 +1,17 @@
 "use client";
 
-import { motion } from "motion/react";
+import Image from "next/image";
+import { motion, type Variants } from "motion/react";
 import { Truck, Banknote, ShoppingCart, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { CITY } from "@/lib/config";
+import { LinkButton } from "./link-button";
 
-const fadeUp = {
+const container: Variants = {
+  hidden: {},
+  show: { transition: { staggerChildren: 0.12, delayChildren: 0.1 } },
+};
+
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   show: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
@@ -20,19 +25,24 @@ const trust = [
 export function Hero() {
   return (
     <section className="relative isolate overflow-hidden">
-      {/* Background image (put your photo at /public/hero.jpg) */}
-      <div
-        className="absolute inset-0 -z-20 bg-cover bg-center"
-        style={{ backgroundImage: "url('/hero.jpg')" }}
+      {/* Background photo: save it as /public/hero.jpg */}
+      <Image
+        src="/hero.jpg"
+        alt=""
+        fill
+        priority
+        sizes="100vw"
+        className="-z-20 object-cover object-center"
       />
-      {/* Overlays for readability */}
+
+      {/* Readability overlays */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-r from-background via-background/85 to-background/30" />
       <div className="absolute inset-x-0 bottom-0 -z-10 h-40 bg-gradient-to-t from-background to-transparent" />
 
       <motion.div
+        variants={container}
         initial="hidden"
         animate="show"
-        transition={{ staggerChildren: 0.12 }}
         className="mx-auto max-w-7xl px-4 py-24 sm:py-32 lg:py-40"
       >
         <motion.span
@@ -61,18 +71,18 @@ export function Hero() {
         </motion.p>
 
         <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
-          <Button size="lg" className="group rounded-full ">
-            <Link
-              href="/shop"
-              className="flex flex-row justify-center items-center gap-1"
-            >
-              Shop Bike Lights
-              <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
-            </Link>
-          </Button>
-          <Button size="lg" variant="secondary" className="rounded-full">
-            <Link href="/shop">Explore Best Sellers</Link>
-          </Button>
+          <LinkButton href="/shop" size="lg" className="group rounded-full">
+            Shop Bike Lights
+            <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+          </LinkButton>
+          <LinkButton
+            href="/shop"
+            size="lg"
+            variant="secondary"
+            className="rounded-full"
+          >
+            Explore Best Sellers
+          </LinkButton>
         </motion.div>
 
         <motion.ul

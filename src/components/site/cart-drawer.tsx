@@ -13,6 +13,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/components/providers";
 import Link from "next/link";
+import { WHATSAPP_NUMBER } from "@/lib/config";
 
 const pkr = (n: number) => `Rs. ${n.toLocaleString("en-PK")}`;
 

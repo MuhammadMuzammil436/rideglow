@@ -58,12 +58,12 @@ export function Faq() {
         transition={{ duration: 0.5, ease: "easeOut" }}
         className="mt-10"
       >
-        <Accordion type="single" collapsible className="space-y-3">
+        <Accordion className="space-y-3">
           {faqs.map((f, i) => (
             <AccordionItem
               key={f.q}
               value={`item-${i}`}
-              className="rounded-xl border border-border bg-card px-5 data-[state=open]:border-primary/50"
+              className="rounded-xl border border-border bg-card px-5 data-[open]:border-primary/50"
             >
               <AccordionTrigger className="text-left text-sm font-medium hover:no-underline">
                 {f.q}

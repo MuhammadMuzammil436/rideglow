@@ -13,6 +13,7 @@ export type Product = {
   image: string;
   category: CategoryKey;
   bestSeller?: boolean;
+  gallery?: string[]; // <- add this
 };
 
 export const categories: { key: "all" | CategoryKey; label: string }[] = [
