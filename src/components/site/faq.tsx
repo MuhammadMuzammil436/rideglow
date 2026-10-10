@@ -11,7 +11,7 @@ import {
 const faqs = [
   {
     q: "Which bike light should I choose?",
-    a: "For city commuting, a 400 to 800 lumen front light plus a rear light is enough. For unlit roads and trails, go for 1000+ lumens like the Ultra Beam. If you are unsure, the Night Rider Set covers both ends at a better price.",
+    a: "For city commuting, a 400 to 800 lumen front light plus a rear light is enough. For dark roads, go for 1000+ lumens. If you are unsure, message us on WhatsApp and we will help you pick.",
   },
   {
     q: "Do your lights support USB-C charging?",
@@ -19,19 +19,19 @@ const faqs = [
   },
   {
     q: "Do you offer Cash on Delivery?",
-    a: "Yes, Cash on Delivery is available in most cities across Pakistan. You can confirm availability for your area at checkout.",
+    a: "Yes. You pay in cash when your order arrives at your door in Karachi.",
   },
   {
-    q: "Which cities do you deliver to?",
-    a: "We deliver nationwide, including Karachi, Lahore, Islamabad, Rawalpindi, Faisalabad, and Peshawar. Remote areas may take a little longer.",
+    q: "Which areas do you deliver to?",
+    a: "We deliver across Karachi. Delivery charges depend on your area and are confirmed on WhatsApp before dispatch.",
   },
   {
-    q: "How can I track my order?",
-    a: "Once your order ships you will get an SMS and WhatsApp message with a tracking number from the courier.",
+    q: "How long does delivery take?",
+    a: "Replace this with your real delivery time, for example 1 to 2 working days.",
   },
   {
     q: "What is your return policy?",
-    a: "If your light arrives damaged or faulty, contact us within 7 days for a replacement or refund. Items should be unused and in original packaging.",
+    a: "Replace this with your real policy, for example: if your light arrives damaged or faulty, contact us within 7 days for a replacement.",
   },
 ];
 

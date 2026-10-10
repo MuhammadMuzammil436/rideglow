@@ -7,6 +7,10 @@ import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Star, Check } from "lucide-react";
 import { useCart } from "@/components/providers";
+import { products } from "@/data/products";
+import Link from "next/link";
+
+const bestSellers = products.filter((p) => p.bestSeller);
 
 export type Product = {
   id: string;
@@ -76,7 +80,11 @@ export function ProductCard({ product }: { product: Product }) {
         </div>
 
         <div>
-          <h3 className="font-semibold">{p.name}</h3>
+          <h3 className="font-semibold">
+            <Link href={`/product/${p.id}`} className="hover:text-primary">
+              {p.name}
+            </Link>
+          </h3>
           <p className="mt-1 line-clamp-2 text-sm text-muted-foreground">
             {p.desc}
           </p>
@@ -101,8 +109,8 @@ export function ProductCard({ product }: { product: Product }) {
               "Add to Cart"
             )}
           </Button>
-          <Button size="sm" variant="outline">
-            Quick View
+          <Button size="sm" variant="outline" asChild>
+            <Link href={`/product/${p.id}`}>Quick View</Link>
           </Button>
         </div>
       </div>

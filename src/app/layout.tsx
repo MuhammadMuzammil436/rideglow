@@ -13,6 +13,10 @@ const mono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "RideGlow | Premium Bike Lights Pakistan",
   description: "Own the night. Ride with confidence.",
+  icons: {
+    icon: "/site-logo/favicon.png",
+    apple: "/site-logo/favicon.png",
+  },
 };
 
 export default function RootLayout({

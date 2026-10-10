@@ -3,6 +3,8 @@
 import { motion } from "motion/react";
 import { Truck, Banknote, ShoppingCart, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import { CITY } from "@/lib/config";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 24 },
@@ -10,13 +12,9 @@ const fadeUp = {
 };
 
 const trust = [
-  { icon: Truck, title: "Delivery Across Pakistan", sub: "With tracking" },
-  { icon: Banknote, title: "Cash on Delivery", sub: "Where available" },
-  {
-    icon: ShoppingCart,
-    title: "Easy Online Ordering",
-    sub: "WhatsApp support",
-  },
+  { icon: Truck, title: `Delivery in ${CITY}`, sub: "Fast local dispatch" },
+  { icon: Banknote, title: "Cash on Delivery", sub: "Pay when it arrives" },
+  { icon: ShoppingCart, title: "Easy Ordering", sub: "WhatsApp support" },
 ];
 
 export function Hero() {
@@ -58,17 +56,27 @@ export function Hero() {
           className="mt-6 max-w-xl text-base text-muted-foreground sm:text-lg"
         >
           Powerful bike lights designed to help you see more, stay visible, and
-          enjoy every ride after dark. Engineered for Karachi coastal breezes,
-          Lahore city thoroughfares, and Margalla night trails.
+          enjoy every ride after dark. Built for Sea View evenings, Clifton
+          roads, and late rides home across {CITY}.
         </motion.p>
 
         <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
-          <Button size="lg" className="group rounded-full">
-            Shop Bike Lights
-            <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+          <Button size="lg" className="group rounded-full " asChild>
+            <Link
+              href="/shop"
+              className="flex flex-row justify-center items-center gap-1"
+            >
+              Shop Bike Lights
+              <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
+            </Link>
           </Button>
-          <Button size="lg" variant="secondary" className="rounded-full">
-            Explore Best Sellers
+          <Button
+            size="lg"
+            variant="secondary"
+            className="rounded-full"
+            asChild
+          >
+            <Link href="/shop">Explore Best Sellers</Link>
           </Button>
         </motion.div>
 

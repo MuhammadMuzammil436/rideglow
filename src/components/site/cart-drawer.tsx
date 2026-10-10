@@ -12,8 +12,7 @@ import {
 } from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { useCart } from "@/components/providers";
-
-const WHATSAPP_NUMBER = "920000000000"; // replace with your number, no + or spaces
+import Link from "next/link";
 
 const pkr = (n: number) => `Rs. ${n.toLocaleString("en-PK")}`;
 
@@ -130,9 +129,10 @@ export function CartDrawer() {
               <Button
                 size="lg"
                 className="w-full rounded-full"
-                onClick={checkout}
+                asChild
+                onClick={() => setOpen(false)}
               >
-                Order on WhatsApp
+                <Link href="/checkout">Checkout</Link>
               </Button>
               <p className="text-center font-mono text-[10px] text-muted-foreground">
                 Delivery charges confirmed on WhatsApp.
