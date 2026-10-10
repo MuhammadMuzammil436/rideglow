@@ -14,7 +14,7 @@ export default function NotFound() {
         <p className="mt-3 text-muted-foreground">
           We couldn't find that page.
         </p>
-        <Button asChild className="mt-6 rounded-full">
+        <Button className="mt-6 rounded-full">
           <Link href="/shop">Back to the shop</Link>
         </Button>
       </div>

@@ -106,7 +106,7 @@ export function Navbar() {
 
           {/* Mobile menu */}
           <Sheet>
-            <SheetTrigger asChild>
+            <SheetTrigger>
               <Button
                 variant="ghost"
                 size="icon"

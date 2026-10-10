@@ -129,7 +129,6 @@ export function CartDrawer() {
               <Button
                 size="lg"
                 className="w-full rounded-full"
-                asChild
                 onClick={() => setOpen(false)}
               >
                 <Link href="/checkout">Checkout</Link>

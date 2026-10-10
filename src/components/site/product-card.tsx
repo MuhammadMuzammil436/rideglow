@@ -109,7 +109,7 @@ export function ProductCard({ product }: { product: Product }) {
               "Add to Cart"
             )}
           </Button>
-          <Button size="sm" variant="outline" asChild>
+          <Button size="sm" variant="outline">
             <Link href={`/product/${p.id}`}>Quick View</Link>
           </Button>
         </div>

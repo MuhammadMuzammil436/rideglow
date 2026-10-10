@@ -108,12 +108,12 @@ export function CheckoutForm() {
           and we'll confirm delivery charges and timing.
         </p>
         <div className="mt-6 flex flex-wrap justify-center gap-3">
-          <Button asChild className="rounded-full">
+          <Button className="rounded-full">
             <a href={waUrl} target="_blank" rel="noreferrer">
               Open WhatsApp again
             </a>
           </Button>
-          <Button asChild variant="outline" className="rounded-full">
+          <Button variant="outline" className="rounded-full">
             <Link href="/shop">Keep shopping</Link>
           </Button>
         </div>
@@ -129,7 +129,7 @@ export function CheckoutForm() {
         <h1 className="mt-4 text-2xl font-bold text-foreground">
           Your cart is empty
         </h1>
-        <Button asChild className="mt-6 rounded-full">
+        <Button className="mt-6 rounded-full">
           <Link href="/shop">Browse lights</Link>
         </Button>
       </section>

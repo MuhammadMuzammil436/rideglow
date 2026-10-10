@@ -61,7 +61,7 @@ export function Hero() {
         </motion.p>
 
         <motion.div variants={fadeUp} className="mt-8 flex flex-wrap gap-3">
-          <Button size="lg" className="group rounded-full " asChild>
+          <Button size="lg" className="group rounded-full ">
             <Link
               href="/shop"
               className="flex flex-row justify-center items-center gap-1"
@@ -70,12 +70,7 @@ export function Hero() {
               <ArrowRight className="size-4 transition-transform group-hover:translate-x-1" />
             </Link>
           </Button>
-          <Button
-            size="lg"
-            variant="secondary"
-            className="rounded-full"
-            asChild
-          >
+          <Button size="lg" variant="secondary" className="rounded-full">
             <Link href="/shop">Explore Best Sellers</Link>
           </Button>
         </motion.div>

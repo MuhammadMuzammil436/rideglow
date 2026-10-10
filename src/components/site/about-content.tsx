@@ -86,10 +86,10 @@ export function AboutContent() {
       </motion.ul>
 
       <div className="mt-12 flex flex-wrap gap-3">
-        <Button asChild className="rounded-full">
+        <Button className="rounded-full">
           <Link href="/shop">Shop lights</Link>
         </Button>
-        <Button asChild variant="outline" className="rounded-full">
+        <Button variant="outline" className="rounded-full">
           <Link href="/contact">Contact us</Link>
         </Button>
       </div>
